@@ -1,0 +1,88 @@
+:root {
+    --duration: 9000ms;
+}
+
+svg, main {
+    width: 400px;
+    height: 200px;
+    position: relative;
+}
+path {
+    stroke: #d8d8dd;
+    stroke-width: 2px;
+}
+svg {
+    position: absolute;
+}
+
+.mover {
+    --anchorX: 50%;
+    --anchorY: 50%;
+
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: hsla(183, 90%, 54%, .3);
+    border: 2px solid hsl(183, 100%, 54%);
+    border-right-color: hsl(43, 100%, 50%);
+    border-left-color: hsl(343, 100%, 50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    offset-path: path("M50,150 C50,0 200,0 200,75 C200,150 350,150 350,0");
+    offset-rotate: auto 90deg;
+    offset-anchor: var(--anchorX) var(--anchorY);
+    animation: move-along var(--duration) 0ms infinite alternate ease-in-out;
+}
+.mover::after {
+    content: '';
+    position: absolute;
+    background: radial-gradient(circle at var(--anchorX) var(--anchorY), red 3px, transparent 3px) no-repeat;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+aside {
+    display: none;
+}
+
+@supports (offset-anchor: 70% 70%) {
+    aside {
+        display: grid;
+    }
+}
+@keyframes move-along {
+    100% {
+        offset-distance: 100%;
+    }
+}
+body {
+    min-height: 100vh;
+    background: #16161c;
+    font-family: system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: hsl(183,100%, 97%);
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
+aside {
+    margin: 0rem 1rem;
+    grid-template-columns: 4em 1fr 4em;
+    grid-gap: 1em;
+}
+label {
+    text-align: right;
+}
+input {
+    margin-bottom: 1rem;
+}
+output {
+    opacity: .7;
+}

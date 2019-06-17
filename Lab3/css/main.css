@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #33ccff, #ff99cc);
+    background-repeat: repeat-x;
+    top: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    font-family: "Coustard", sans-serif;
+    background: linear-gradient(to right, grey 7%, green 15%, yellow 50%, red 70%, black);
+    height: 10vh;
+    min-height: 25px;
+    /*border-radius: 500px;*/
+}
+
+header p {
+    float: left;
+    font-size: 44pt;
+    line-height: 10vh;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    margin: 0px;
+}
+
+.strongText{
+    font-weight: bold;
+}
+
+#logo {
+    float: left;
+    height: 10vh;
+    width: 10vh;
+    min-width: 25px;
+    min-height: 25px;
+}
+
+nav {
+    width: 25vw;
+}
+
+nav ul {
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 1vw;
+    z-index: 15 !important;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li p {
+    font-size: 16pt;
+    text-align: center;
+    padding: 0px 3px;
+    margin: 3px 3px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    min-width: 85px;
+}
+
+nav ul li p:hover {
+    background-color: lightsteelblue;
+}
+.error {
+    font-size: 14pt;
+    color: red;
+}
+
+footer{
+    width: 100%;
+    height: 5%;
+    background-color: black;
+    text-align: center;
+    font-size: 1em;
+    color: white;
+}
+
+@media only screen and (max-width: 1280px) {
+    header p {
+        font-size: 29pt;
+    }
+
+    nav ul li p {
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    header p {
+        font-size: 20pt;
+    }
+    nav {
+        width: 97vw;
+    }
+    nav ul li p {
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (max-width: 585px) {
+    header p {
+        font-size: 16pt;
+    }
+}
+@media only screen and (max-width: 480px) {
+    header p {
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (max-height: 520px) {
+    header p {
+        font-size: 16pt;
+    }
+
+    nav {
+        width: 97vw;
+    }
+
+    nav ul li p {
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (max-height: 320px) {
+    header p {
+        font-size: 12pt;
+    }
+
+}

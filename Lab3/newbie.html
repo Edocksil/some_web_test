@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>SCP: новичкам</title>
+    <link rel="icon" type="image/png" href="src/images/emblem.png">
+
+    <link href='https://fonts.googleapis.com/css?family=Coustard' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/newbie.css"/>
+
+    <script src="scripts/scpGIF.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<header>
+    <p>SCP</p>
+    <a href="http://scpfoundation.ru/"><img id="logo" src="./src/images/emblem.png" alt="logo"/></a>
+    <p>Secure.Contain.Protect Foundation</p>
+</header>
+<div class="row1">
+    <nav>
+        <ul>
+            <li><a href="./index.html"><p>About</p></a></li>
+            <li><a href="./newbie.html"><p>Для новачка (ви тут)</p></a></li>
+            <li><a href="./request.html"><p>Подати заявку<br>про об'єкт</p></a></li>
+            <li><a href="./entertainment.html"><p>Розважитися</p></a></li>
+        </ul>
+    </nav>
+    <div class="music">
+        <div>
+            <p class="strongText">Музика, яка підходить для читання статті</p>
+            <audio controls="controls" src="./src/media/tili_tili_bom.mp3" id="au1">
+                <p class="error">Відтворення музики не підтримується вашим браузером</p>
+            </audio>
+        </div>
+        <p class="strongText">Або завантажте свою музику, з якою вам не буде страшно</p>
+        <div>
+            <audio id="sound" controls="controls">
+                <p class="error">Відтворення музики не підтримується вашим браузером</p>
+            </audio>
+            <br>
+            <input type="file" id="audioInput"/>
+        </div>
+    </div>
+</div>
+<div class="row2">
+    <article>
+        <h1>Об'єкт №: SCP-173</h1>
+        <h2>Клас об'єкта: Евклід</h2>
+        <p class="strongText">Особливі умови зберігання:</p>
+        <p>Об'єкт SCP-173 повинен постійно зберігатися в закритому контейнері. При відвідуванні персоналом контейнера
+            з SCP-173 у контейнер повинно входити не менше трьох осіб, після чого двері мають бути негайно зачинені.
+            Дві особи повинні постійно підтримувати прямий зоровий контакт з SCP-173 до тих пір,
+            поки всі співробітники не покинуть контейнер, і він не буде замкнений.
+        </p>
+        <p class="strongText">Опис:</p>
+        <p>
+            Об'єкт був привезений в Зону 19 у 1993-му році. Походження об'єкту невідомо. SCP-173 виготовлений з бетону
+            і арматури зі слідами аерозольної фарби марки Krylon. Об'єкт SCP-173 одушевлений і вкрай ворожий.
+            Об'єкт не може рухатися в той час, коли перебуває в межах прямої видимості.
+            При роботі з SCP-173 треба постійно зберігати зоровий контакт з об'єктом. Персонал, призначений для входу в
+            контейнер,
+            проінструктований попереджати один одного перед тим, як моргнути. Об'єкт, як повідомляється, нападає,
+            ламаючи шию біля основи черепа, або з допомогою удушення. У разі нападу персонал повинен застосовувати
+            дії зі стримування небезпечних об'єктів класу 4.
+        </p>
+        <p>Персонал доповідає про скреготіння, яке постійно звучить з контейнера,
+            коли ніхто не присутній всередині. Це вважається нормальним, і про
+            будь-які зміни в цьому має бути негайно повідомлено чинному куратору HMCL.
+        </p>
+        <p>Червонувато-коричнева субстанція на підлозі являє собою суміш фекалій і крові.
+            Походження цих речовин невідомо. Контейнер повинен очищатися раз в два тижні.
+        </p>
+    </article>
+</div>
+<div class="row3">
+    <section>
+        <div class="col1">
+
+            <img alt="Об'єкт №173 'Скульптура'" src="src/images/SCP173.jpg">
+            <p>Фото під час першого поміщення у Фонд</p>
+        </div>
+        <div class="col2">
+            <div id="forGIF">
+                <canvas id="canvas">
+                    <p class="error">На жаль, ваш браузер не підтримує анімацію</p>
+                </canvas>
+            </div>
+            <p>Типовий вигляд запису з камер</p>
+        </div>
+    </section>
+</div>
+<footer>Усі події та персонажі вигадані. Будь-який збіг з реальністю випадковий.</footer>
+</body>
+</html>

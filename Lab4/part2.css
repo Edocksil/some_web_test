@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+}
+a{
+    background: white;
+    color: black;
+}
+canvas {
+    position: fixed;
+}
+body {
+    background: #2095E8;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.box {
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 1%;
+    width: 400px;
+    height: 400px;
+}
+
+.mac {
+    background: #A8A8A8;
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+    border-radius: 15px 15px 10px 10px;
+}
+
+.mac-screen {
+    color: #7FD517;
+    background: #000;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 50%;
+    border-radius: 20px;
+}
+
+.joke {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 100%;
+    height: 60%;
+}
+
+.mac-screen-toolbar {
+    color: #000;
+    background: #7FD517;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    width: 100%;
+    height: 10%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    padding: 2px 3px 0 2px;
+
+}
+
+li:hover {
+    background: #000;
+    color: #7FD517;
+}
+
+#file {
+    display: inline-block;
+}
+
+#new-joke {
+    display: none;
+    color: #000;
+    background: red;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+}
+
+#new-joke:hover {
+    color: #7FD517;
+    background: red;
+}
+
+#file:hover #new-joke {
+    display: block;
+}
+
+.mac-floppy-drive {
+    background: #000;
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    width: 60%;
+    height: 2%;
+}
+
+.mac-floppy-drive-eject {
+    background: #000;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    width: 10%;
+    height: 5%;
+}

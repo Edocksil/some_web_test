@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>SCP: заявка</title>
+    <link rel="icon" type="image/png" href="src/images/emblem.png">
+
+    <link href='https://fonts.googleapis.com/css?family=Coustard' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/request.css"/>
+
+    <script src="scripts/reqJSON.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<header>
+    <p>SCP</p>
+    <a href="http://scpfoundation.ru/"><img id="logo" src="./src/images/emblem.png" alt="logo"/></a>
+    <p>Secure.Contain.Protect Foundation</p>
+</header>
+<nav>
+    <ul>
+        <li><a href="./index.html"><p>About</p></a></li>
+        <li><a href="./newbie.html"><p>Для новачка</p></a></li>
+        <li><a href="./request.html"><p>Подати заявку<br>про об'єкт (ви тут)</p></a></li>
+        <li><a href="./entertainment.html"><p>Розважитися</p></a></li>
+    </ul>
+</nav>
+<section>
+    <h2>Заповніть цю форму, щоб повідомити нам, якщо ви зустріли об'єкт</h2>
+    <div id="forAuUser">
+        <form id="valForm">
+            <div>
+                <fieldset>
+                    <legend>Повідомити про об'єкт</legend>
+                    <div><label for="name">Ім'я або нікнейм(лишіть пустим, якщо хочете анонімності)</label></div>
+                    <div><input name="name" id="name" type="text"
+                                placeholder="Ваше ім'я" autofocus=""
+                                title="Ваше ім'я"></div>
+
+                    <div><label for="email">Email (Ваша е-пошта для зв'язку)</label></div>
+                    <div><input name="email" id="email" type="email" placeholder="scpfond@mail.com"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required=""
+                                title="Ваша е-пошта для зв'язку"></div>
+
+                    <div><label for="scpClass">Виберіть ймовірний клас об'єкту</label></div>
+                    <div><select name="scpClass" id="scpClass" title="Оберіть клас об'єкту">
+                        <option value="neutr">Нейтралізований</option>
+                        <option value="safe">Безпечний</option>
+                        <option value="euclid">Евклід</option>
+                        <option value="cater">Кетер</option>
+                        <option value="taum">Тауміель</option>
+                        <option value="unrec">Не можу визначити</option>
+                    </select></div>
+
+                    <div><label for="date">Дата зустрічі з об'єктом</label></div>
+                    <div><input type="date" name="date" id="date" required="" title="Дата"></div>
+
+                    <div><label for="tel">Номер телефону (можна пропустити для анонімності)</label></div>
+                    <div><input name="tel" id="tel" type="tel" placeholder="+380501234567" pattern="^\+380\d{9}$"
+                                title="Номер вашого телефону"></div>
+
+                    <div><label for="country">Країна:</label></div>
+                    <div><input name="country" id="country" type="text" placeholder="Україна" required=""
+                                title="Країна"></div>
+
+                    <div><label for="city">Місто:</label></div>
+                    <div><input name="city" id="city" type="text" placeholder="Черкаси" required="" title="Місто"></div>
+
+                    <div><label for="district">Район:</label></div>
+                    <div><input name="district" id="district" type="text" placeholder="Хімпас" title="Район"></div>
+                </fieldset>
+            </div>
+            <div>
+                <button id="classTable">Як обрати клас? (За принципом коробки)</button>
+            </div>
+            <table id="forJson"></table>
+            <div>
+                <p>Загрузіть фото об'єкту:</p>
+                <input type="file" id="images" multiple="">
+                <div id="forImage"></div>
+            </div>
+            <div id="drag">
+                <section id="drop-zone" ondragover="dragOverHandler(event);" ondrop="dropHandler(event);">
+                    Або загрузіть фото, просто перетягнувши його сюди ↓
+                </section>
+                <div id="drop-info"></div>
+                <div id="thumbnails-zone">
+                    <img src="" class="thumb">
+                </div>
+            </div>
+            <button type="submit" title="Надіслати форму">Надіслати</button>
+        </form>
+    </div>
+
+</section>
+<footer>Усі події та персонажі вигадані. Будь-який збіг з реальністю випадковий.</footer>
+<script src="scripts/dragger.js"></script>
+</body>
+</html>

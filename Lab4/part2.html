@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kravchenko</title>
+    <link rel="stylesheet" href="part2.css">
+    <link rel="stylesheet" href="train.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<body>
+<div class="row1">
+    <a href="dogs.html">Натисніть сюди, якщо любите собак!</a>
+</div>
+<div class="box">
+    <div class="mac">
+        <div class="mac-body"></div>
+        <div class="mac-screen">
+            <div class="mac-screen-toolbar">
+                <ul>
+                    <li id="file">Мудрість<p id="new-joke">Нова</p></li>
+                    <!--<li>Edit</li>-->
+                    <!--<li>View</li>-->
+                </ul>
+            </div> <!-- /mac-screen-toolbar -->
+            <div class="joke">
+                <dt id="joke-question">Можна питання?</dt>
+                <dd id="joke-punchline">Ви тільки що його задали</dd>
+            </div> <!-- /joke -->
+        </div> <!-- /mac-screen -->
+        <div class="mac-floppy-drive"></div>
+        <div class="mac-floppy-drive-eject"></div>
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<main>
+    <svg viewBox="0 0 400 200">
+        <path d="M50,150 C50,0 200,0 200,75 C200,150 350,150 350,0" fill="none"/>
+    </svg>
+    <div class="mover"></div>
+</main>
+<aside>
+    <label for="anchor-x">X</label>
+    <input type="range" id="anchor-x" value="50" min="0" max="100"/>
+    <output id="output-x">50%</output>
+
+    <label for="anchor-y">Y</label>
+    <input type="range" id="anchor-y" value="50" min="0" max="100"/>
+    <output id="output-y">50%</output>
+</aside>
+<script src="train.js"></script>
+<script src="part2.js"></script>
+</body>
+</html>
